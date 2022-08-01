@@ -62,7 +62,7 @@ function showPerson(){
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
-  info.textContent = item.text;
+  info.textContent = item.text;//dfhgdfghf
 }
 //show next person
 nextBtn.addEventListener("click" ,function() {
