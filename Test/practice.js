@@ -38,12 +38,22 @@
 // console.log(first([],2));
 // console.log(first([1,2,3,4,5,6,7],8));
 
-const last = function(array, n){
-    if (array == null)
-    return void 0;
-    if (n == null)
-    return array[array.length -1];
-    return array.slice(Math.max(array.length - n, 0)); 
-};
-const result = last([2,4,3,5,6,8],2);
-console.log(result);
+// const last = function(array, n){
+//     if (array == null)
+//     return void 0;
+//     if (n == null)s
+//     return array[array.length -1];
+//     return array.slice(Math.max(array.length - n, 0)); 
+// };
+// const result = last([2,4,3,5,6,8],2);
+// console.log(result);
+
+//Write a JavaScript program to sort the items of an array
+
+// let arr1 = [-3,-4,2,4,6,-7,1,-5,5];
+// arr1.sort(function(a,b) {return(a-b)});
+// console.log(arr1);
+const arr1 = function(a){
+     return a.sort(function(a,b){return a-b})
+}
+console.log(arr1([-3,-4,2,4,6,-7,1,-5,5]));
