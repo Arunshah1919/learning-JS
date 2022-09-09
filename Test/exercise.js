@@ -40,11 +40,50 @@
 // console.log(result);
 
 // const jeans = [32,34,30,32,30,34,36,36,30,36];
-// const result = jeans.filter((num)=>  num ===32);
-
-// console.log(result);
-
-// const jeans = [32,34,30,32,30,34,36,36,30,36];
 // jeans.splice(1,6,28);
 // console.log(jeans); 
 
+// const jeans = [32,34,30,32,30,34,32,32,34,32,,40,32,32,36,36,30,36];
+// const result = jeans.filter((num)=>  num ===32);
+
+// class colors {
+//     constructor(color, colorCount) {
+//         this.color = color;
+//         this.colorCount = colorCount;
+//         this.getColorCount = function () {
+//             console.log(`The Jeans color is: ${this.color} and total numbers of jeans are: ${this.colorCount}`);
+//         };
+//         //    colors.prototype.getColor = function(){
+//         //     console.log(`The Jeans color is: ${this.color}`);
+//         //    };
+//     }
+// }
+
+// let black = new colors("Black", 3);
+// let blue = new colors("Blue", 2);
+// //black.getColor();
+// black.getColorCount();
+// blue.getColorCount();
+// console.log(result);
+
+const colorsCount = {
+    30 : ["black","blue","sky"],
+    32 : ["black","blue","sky"],
+    34 : ["black","blue","white","sky"],
+    36 : ["black","blue","navy","sky"],
+    38 : ["black","blue"],
+    40 : ["balck","blue"],
+}
+const jeansWithColors = function(size){
+    try{
+        return  {
+            colors:colorsCount[size]||'Not availble',
+            count: colorsCount[size] ? colorsCount[size].length: []}
+    }
+    catch(e){
+        return {error:e}
+    }
+   
+}
+console.log(jeansWithColors(36));
+//console.log(colorsCount[42]);
