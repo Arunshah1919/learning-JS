@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: linear-gradiet(300deg, #757b87, #c15e1b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        input {
+            padding: 1rem;
+            border-radius: 25px;
+            border: none;
+            background-color: rgb(187, 20, 20);
+            font-family: inherit;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            min-width: 300px;
+            font-size: 1rem;
+        }
+        input:focus {
+            outline: none;
+        }
+        .weather {
+            text-align: center;
+            font-size: 2rem;
+        }
+        .weather h2 {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+        } /* .weather img{ transform: scale(2); } */</style>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="box">
+        <div class="wave-one"></div>
+        <div class="wave-two"></div>
+        <div class="wave-three"></div>
+
+        <div id="weathercon">
+            <i class="fa-solid fa-sun" style="color:#0a0a08"></i></div>
+            <div class="info">
+                <h2 class="location"><i class="fa-solid fa-street-view"></i>Ludhiana,IN</h2>
+                <p id="date"> Saturday | 24 September 2022 | 10:57 pm</p>
+                <h1 class="temp"> 24°C</h1>
+                <h3 class="tempmin_max">Min 21°C | Max 26°C</h3>
+            </div>
+    </div>
+</body>
+</html>
+

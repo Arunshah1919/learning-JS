@@ -1,3 +1,4 @@
-const add = require ("./osmod");
+const {add,Type} = require ("./osmod");
 
-console.log(add);
+console.log(add(10,10));
+console.log(Type);
