@@ -2,7 +2,7 @@ const http = require ("http");
 const fs = require ("fs");
 const requests = require ("requests")
 
-const readFile = fs.readFileSync("home.html", "utf-8");
+const readFile = fs.readFileSync("./home.html", "utf-8");
 const replaceVal = (tempval, orgVal) =>{
     let temperature = tempval.replace("{%tempVal%}", parseInt(orgVal.main.temp/10));
      temperature = temperature.replace("{%tempMin%}", parseInt(orgVal.main.temp_min/10));
@@ -14,8 +14,10 @@ const replaceVal = (tempval, orgVal) =>{
 };
 
 const server = http.createServer((req,res) =>{
+    const {city}= req.body
+     city ? city : 'patiala'
     if (req.url == "/") {
-        requests('https://api.openweathermap.org/data/2.5/weather?q=ludhiana&appid=8f04961e0a6dd4f80d4c7d39c8051b15')
+        requests(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8f04961e0a6dd4f80d4c7d39c8051b15`)
 .on('data',  (chunk) => {
     const objData = JSON.parse(chunk);
     const arrData = [objData];
