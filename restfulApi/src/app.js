@@ -3,7 +3,7 @@ const app = express();
 require("./db/conn");
 const Student = require("./models/students")
 const port = process.env.PORT || 3000;
-app.use(express.json())
+app.use(express.json());
 
 //create a new students
 app.post("/students", (req,res)=>{
